@@ -54,7 +54,29 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  forecastHtml = ` 
+<div class="weather-forecast-day">
+<div class="weather-forecast-date">${day}</div>
+<img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png"
+width="42"/>
+</div>
+<div class="weather-forecast-temp">
+<span class="weather-forecast-temp-high">18</span>
+<span class="weather-forecast-temp-low">12</span>
+</div>
+</div>
+`;
+  });
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Sydney");
+displayForecast();
