@@ -55,12 +55,15 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml = "";
 
-  forecastHtml = ` 
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` 
 <div class="weather-forecast-day">
 <div class="weather-forecast-date">${day}</div>
 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png"
@@ -73,6 +76,8 @@ width="42"/>
 </div>
 `;
   });
+
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
