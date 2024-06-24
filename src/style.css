@@ -87,6 +87,7 @@ main {
 
 .weather-app-temp-container {
   display: flex;
+  justify-content: space-around;
 }
 
 .weather-app-temp-degree {
@@ -106,9 +107,15 @@ main {
 }
 
 .weather-forecast {
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+}
+
+.weather-forecast-day {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .weather-forecast-date {
@@ -121,6 +128,7 @@ main {
 .weather-forecast-temp {
   font-size: 13px;
   color: black;
+  text-align: center;
   display: flex;
   justify-content: center;
 }
@@ -131,4 +139,5 @@ main {
 
 .weather-forecast-icon {
   font-size: 38px;
+  text-align: center;
 }
