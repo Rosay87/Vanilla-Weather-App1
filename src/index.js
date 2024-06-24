@@ -55,8 +55,6 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -64,19 +62,17 @@ function displayForecast() {
     forecastHtml =
       forecastHtml +
       ` 
-<div class="weather-forecast-day">
-<div class="weather-forecast-date">${day}</div>
-<img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png"
-width="42"/>
-</div>
-<div class="weather-forecast-temp">
-<span class="weather-forecast-temp-high">18</span>
-<span class="weather-forecast-temp-low">12</span>
-</div>
-</div>
-`;
+        <div class="weather-forecast-day">
+         <div class="weather-forecast-date">${day}</div>
+         <div class="weather-forecast-icon">🌥️</div>
+         <div class="weather-forecast-temp">
+            <span class="weather-forecast-temp-high">18</span>
+            <span class="weather-forecast-temp-low">12</span>
+         </div>
+        `;
   });
 
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
