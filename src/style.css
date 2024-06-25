@@ -116,18 +116,17 @@ main {
 
 .weather-forecast-temperatures {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 10px;
-  text-align: center;
   color: #f65282;
 }
 
 .weather-forecast-temp {
-  font-size: 13px;
+  font-size: 14px;
   color: black;
-  text-align: center;
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 
 .weather-forecast-icon {
