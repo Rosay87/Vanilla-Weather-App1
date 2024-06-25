@@ -73,17 +73,17 @@ function displayForecast(response) {
         forecastHtml +
         ` 
         <div class="weather-forecast-day">
-         <div class="weather-forecast-date">${day.time}</div>
-         <div>
-         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
-         </div>
-         <div class="weather-forecast-temp">
-            <span class="weather-forecast-temp-high">${Math.round(
-              day.temperature.maximum
-            )}°</span>
-            <span class="weather-forecast-temp-low">${Math.round(
+         <div class="weather-forecast-date">Tues</div>
+                  <img src="${
+                    day.condition.icon_url
+                  }" class="weather-forecast-icon" />
+         <div class="weather-forecast-temperatures">
+                  <div class="weather-forecast-temp">
+           <strong>${Math.round(day.temperature.maximum)}°</strong>
+           </div>
+            <div class="weather-forecast-temp">${Math.round(
               day.temperature.minimum
-            )}°</span>
+            )}°</div>
          </div>
          </div>
         `;
